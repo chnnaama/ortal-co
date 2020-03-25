@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyBFbOvWQRkQMVAFA3miycnIn80uG93uqlg',
+    authDomain: 'ortal-co.firebaseapp.com',
+    databaseURL: 'https://ortal-co.firebaseio.com',
+    projectId: 'ortal-co',
+    storageBucket: 'ortal-co.appspot.com',
+    messagingSenderId: '852148061605',
+    appId: '1:852148061605:web:69ab491b2f2e0dda25144c',
+    measurementId: 'G-QBFBEZNHHQ',
+  }
 };
 
 /*

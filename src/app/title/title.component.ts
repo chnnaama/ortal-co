@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-title',
@@ -8,14 +10,17 @@ import { Component, OnInit } from '@angular/core';
 export class TitleComponent implements OnInit {
   private titles: string[];
   private title: string;
-  constructor() {
+  items: Observable<any[]>;
+  constructor(private afs: AngularFirestore) {
+    this.items = this.afs.collection('items').valueChanges();
     this.titles = [
       'nadav', 'leor', 'naama', 'idan', 'aa', 'ff', '1231', '21312'
     ];
     this.title = 'hello';
   }
 
-  ngOnInit() {
+  async ngOnInit() {
+
   }
 
   onClick() {
@@ -23,7 +28,5 @@ export class TitleComponent implements OnInit {
     this.title = this.titles[random];
     this.titles.splice(random, 1);
   }
-  // getRandomInt(max) {
-  //   return Math.floor(Math.random() * Math.floor(max));
-  // }
+
 }
