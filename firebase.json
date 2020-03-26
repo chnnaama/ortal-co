@@ -11,7 +11,7 @@
     "source": "functions"
   },
   "hosting": {
-    "public": "n",
+    "public": "dist/covid19",
     "ignore": [
       "firebase.json",
       "**/.*",

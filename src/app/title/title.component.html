@@ -1,6 +1,13 @@
-<h1>
-  {{ title }}
-</h1>
+<button (click)="targil1()">תרגיל 1</button>
+<button (click)="targil2()">תרגיל 2</button>
+<button (click)="targil3()">תרגיל 3</button>
+<h1> {{ main }}</h1>
+<h2> {{ submain }}</h2>
+<div>
+  <h3>
+    {{ title }}
+  </h3>
+</div>
 <button *ngIf="itemLeft > 0" (click)="onClick()">click</button>
 
-<button (click)="onRest()">rest</button>
+
