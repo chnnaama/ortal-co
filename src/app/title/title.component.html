@@ -3,10 +3,12 @@
 <button (click)="targil3()">תרגיל 3</button>
 <h1> {{ main }}</h1>
 <h2> {{ submain }}</h2>
-<div>
-  <h3>
-    {{ title }}
-  </h3>
+<div class="card">
+  <div class="card-body">
+    <h3>
+      {{ title }}
+    </h3>
+  </div>
 </div>
 <button *ngIf="itemLeft > 0" (click)="onClick()">click</button>
 
